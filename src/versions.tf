@@ -1,7 +1,7 @@
 terraform {
-  required_version = ">= 0.12, < 0.15"
+  required_version = ">= 0.12"
 
   required_providers {
-    vault = "~> 2.8"
+    vault = "~>3.0"
   }
 }
