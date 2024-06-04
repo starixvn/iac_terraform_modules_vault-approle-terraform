@@ -1,3 +1,8 @@
+output "role_name" {
+  description = "The role Name of created approle"
+  value       = vault_approle_auth_backend_role.this.role_name
+}
+
 output "role_id" {
   description = "The role ID of created approle"
   value       = vault_approle_auth_backend_role.this.role_id
