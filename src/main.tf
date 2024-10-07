@@ -13,11 +13,13 @@ resource "vault_approle_auth_backend_role" "this" {
   token_policies = [vault_policy.this.id]
 
   secret_id_ttl          = var.secret_id_ttl
-  token_max_ttl          = var.token_max_ttl
   secret_id_num_uses     = var.secret_id_num_uses
+  secret_id_bound_cidrs  = var.bound_cidrs
+  token_max_ttl          = var.token_max_ttl
   token_explicit_max_ttl = var.token_explicit_max_ttl
   token_num_uses         = var.token_num_uses
   token_period           = var.token_period
+  token_bound_cidrs      = var.bound_cidrs
 }
 
 resource "vault_approle_auth_backend_role_secret_id" "this" {

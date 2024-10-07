@@ -60,3 +60,9 @@ variable "create_secret_id" {
   description = "Create secret_id"
   default     = false
 }
+
+variable "bound_cidrs" {
+  type        = list(string)
+  description = "specifies blocks of IP addresses which can authenticate successfully"
+  default     = []
+}
